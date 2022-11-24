@@ -1,3 +1,4 @@
 - case_name: test_login_normal
   body: [ { "username": "shi002","password": "shi002","repassword": "shi002" },{ "username": "shi002","password": "shi002" },{ } ]
   expect: [ {"errorCode": 0,"errorMsg": ""},{"errorCode": 0,"errorMsg": ""},{"errorCode": 0,"errorMsg": ""} ]
+- case_name: test_login_register_repeat
