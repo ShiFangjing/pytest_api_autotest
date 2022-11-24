@@ -1,5 +1,8 @@
 class TestCollect():
 
+    def test_collect_normal(self):
+        pass
+
     def test_collect_unregister(self):
         pass
 
@@ -7,7 +10,4 @@ class TestCollect():
         pass
 
     def test_collect_logout(self):
-        pass
-
-    def test_collect_normal(self):
         pass
