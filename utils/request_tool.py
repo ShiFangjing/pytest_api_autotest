@@ -26,10 +26,10 @@ class RequestTool:
     """
     def request(self, url, method, data=None, json=None, **kwargs):
         url = self.api_root_url + url
-        headers = dict(**kwargs).get("headers")
-        params = dict(**kwargs).get("params")
-        files = dict(**kwargs).get("params")
-        cookies = dict(**kwargs).get("params")
+        # headers = dict(**kwargs).get("headers")
+        # params = dict(**kwargs).get("params")
+        # files = dict(**kwargs).get("params")
+        # cookies = dict(**kwargs).get("cookies")
         if method == "GET":
             return self.session.get(url, **kwargs)
         if method == "POST":
