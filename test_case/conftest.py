@@ -11,6 +11,7 @@ def delete_user():
 
 @pytest.fixture(scope='session')
 def get_cookie():
+    print("调用了XXXX次")
     user = User('https://www.wanandroid.com')
     params = {'username': 'sfj123456',
               'password': 'sfj123456'}

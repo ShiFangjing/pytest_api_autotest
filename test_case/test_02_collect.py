@@ -14,7 +14,12 @@ class TestCollect():
         cookie = get_cookie
         params2 = {'name': 'Baidu',
                    'link': 'www.baidu.com'}
-        res = col.add_collect(data = params2, cookies = cookie)
+        res = col.add_collect(data=params2, cookies=cookie)
+        print(res.json())
+
+    def test_query_collect(self, get_cookie):
+        cookie = get_cookie
+        res = col.query_collect(cookies=cookie)
         print(res.json())
 
     def test_collect_unregister(self):
@@ -28,4 +33,4 @@ class TestCollect():
 
 
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(['-vs', 'test_02_collect.py'])
