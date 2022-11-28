@@ -1,0 +1,27 @@
+INFO    2022-11-28 16:59:40,158E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/register
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '49', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi002&password=shi002&repassword=shi002
+响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"} ms
+=====================================================
+INFO    2022-11-28 16:59:40,378E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/register
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=AF9D87563DCFC75294C3AD1D774A07D8', 'Content-Length': '49', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi002&password=shi002&repassword=shi002
+响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"} ms
+=====================================================
+INFO    2022-11-28 16:59:40,567E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/register
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=AF9D87563DCFC75294C3AD1D774A07D8', 'Content-Length': '49', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi002&password=shi002&repassword=shi002
+响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"} ms
+=====================================================
