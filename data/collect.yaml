@@ -2,17 +2,17 @@
   body: [{'name':'github','link': 'www.github.com'}]
   expect: [{"data": {"link": "www.github.com","name": "github"},"errorCode": 0,"errorMsg": ""}]
 - case_name: test_update_collect
-  body: [{'name':'github2','link': 'www.github.com2'}]
-  expect: [{"data": {"link": "www.github.com2","name": "github2"},"errorCode": 0,"errorMsg": ""}]
+  body: [{'name':'github','link': 'www.github.com'},{'name':'github2','link': 'www.github.com2'},{}]
+  expect: [{"data": {"link": "www.github.com","name": "github"},"errorCode": 0,"errorMsg": ""},{"data": {"link": "www.github.com2","name": "github2"},"errorCode": 0,"errorMsg": ""},{"data": {"link": "www.github.com2","name": "github2"},"errorCode": 0,"errorMsg": ""}]
 - case_name: test_delete_collect
-  body: [{'name':'github','link': 'www.github.com'}]
-  expect: [{"data": null,"errorCode": 0,"errorMsg": ""}]
+  body: [{'name':'github','link': 'www.github.com'},{}]
+  expect: [{"data": {"link": "www.github.com","name": "github"},"errorCode": 0,"errorMsg": ""},{"data": null,"errorCode": 0,"errorMsg": ""}]
 - case_name: test_collect_unregister
   body: [{'name':'github','link': 'www.github.com'}]
-  expect:
+  expect: [{"errorCode": -1001,"errorMsg": "请先登录！"}]
 - case_name: test_collect_unlogin
   body: [{'name':'github','link': 'www.github.com'}]
-  expect:
+  expect: [{"errorCode": -1001,"errorMsg": "请先登录！"}]
 - case_name: test_collect_logout
   body: [{'name':'github','link': 'www.github.com'}]
-  expect:
+  expect: [{"errorCode": -1001,"errorMsg": "请先登录！"}]

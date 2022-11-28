@@ -15,7 +15,7 @@ def delete_user():
 @pytest.fixture(scope='function')
 def delete_user_collections():
     # TODO: 删除用户的所有收藏
-    pass
+    yield
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -31,6 +31,7 @@ def get_cookie():
 
 @pytest.fixture(scope='session', autouse=True)
 def logout():
+    yield
     print("用户登出")
     user = User(base_url)
     user.logout(cookies=only_cookie)
