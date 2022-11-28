@@ -1,5 +1,5 @@
 import requests
-
+from utils.log_tool import log_decorator
 
 class RequestTool:
 
@@ -24,6 +24,7 @@ class RequestTool:
     """
     统一调用的这个方法
     """
+    @log_decorator(True)
     def request(self, url, method, data=None, json=None, **kwargs):
         url = self.api_root_url + url
         # headers = dict(**kwargs).get("headers")

@@ -12,8 +12,6 @@ user = User(base_url)
 class TestUser:
     @pytest.mark.usefixtures('delete_user')
     def test_login_normal(self):
-        # print(base_url)
-        # print(case_data)
         # 注册
         register_result = user.register(data=case_data[0]['body'][0])
         AssertTool.assert_json_contains(register_result.json(), case_data[0]['expect'][0])
