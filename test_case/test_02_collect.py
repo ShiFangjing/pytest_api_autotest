@@ -10,17 +10,19 @@ col = Collect(base_url)
 
 class TestCollect():
 
-    def test_collect_normal(self, get_cookie):
-        cookie = get_cookie
-        params2 = {'name': 'Baidu',
-                   'link': 'www.baidu.com'}
-        res = col.add_collect(data=params2, cookies=cookie)
-        print(res.json())
+    def test_collect_normal(self):
+        pass
+        # cookie = get_cookie
+        # params2 = {'name': 'Baidu',
+        #            'link': 'www.baidu.com'}
+        # res = col.add_collect(data=params2, cookies=cookie)
+        # print(res.json())
 
-    def test_query_collect(self, get_cookie):
-        cookie = get_cookie
-        res = col.query_collect(cookies=cookie)
-        print(res.json())
+    def test_update_collect(self):
+        pass
+
+    def test_delete_collect(self, get_cookie):
+        pass
 
     def test_collect_unregister(self):
         pass

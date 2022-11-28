@@ -1,0 +1,18 @@
+- case_name: test_collect_normal
+  body:
+  expect:
+- case_name: test_update_collect
+  body: 11
+  expect:
+- case_name: test_delete_collect
+  body:
+  expect:
+- case_name: test_collect_unregister
+  body:
+  expect:
+- case_name: test_collect_unlogin
+  body:
+  expect:
+- case_name: test_collect_logout
+  body:
+  expect:

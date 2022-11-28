@@ -1,7 +1,9 @@
 import pytest
 
 from api.user import User
-
+from config.read_config import ReadConfig
+only_cookie = {}
+base_url = ReadConfig().read_base_url()
 
 @pytest.fixture(scope='function')
 def delete_user():
@@ -9,11 +11,25 @@ def delete_user():
     pass
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session', autouse=True)
+def delete_user_collections():
+    # TODO: 删除用户的所有收藏
+    pass
+
+
+@pytest.fixture(scope='session', autouse=True)
 def get_cookie():
-    print("调用了XXXX次")
-    user = User('https://www.wanandroid.com')
+    print("用户登录")
+    user = User(base_url)
     params = {'username': 'sfj123456',
               'password': 'sfj123456'}
     res = user.login(data=params)
-    return dict(res.cookies)
+    only_cookie = res.cookies
+    return only_cookie
+
+
+@pytest.fixture(scope='session', autouse=True)
+def logout():
+    print("用户登出")
+    user = User(base_url)
+    user.logout(cookies=only_cookie)
