@@ -25,3 +25,57 @@ INFO    2022-11-28 16:59:40,567E:\2_PythonProject\pytest_api_autotest\log\info-2
 请求内容: username=shi002&password=shi002&repassword=shi002
 响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"} ms
 =====================================================
+INFO    2022-11-28 18:45:34,865E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/register
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '49', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi004&password=shi004&repassword=shi004
+响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"}
+=====================================================
+INFO    2022-11-28 18:45:35,011E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/login
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=8BDF2E6B03A6302AFB380511A5CB28D6', 'Content-Length': '31', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi004&password=shi003
+响应体: {"data":null,"errorCode":-1,"errorMsg":"账号密码不匹配！"}
+=====================================================
+INFO    2022-11-28 18:49:25,031E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/register
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '49', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi002&password=shi002&repassword=shi002
+响应体: {"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"}
+=====================================================
+INFO    2022-11-28 18:49:25,594E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/login
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=ED7946F80B40050E56F5798B46D4D75A', 'Content-Length': '31', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=shi002&password=shi002
+响应体: {"data":{"admin":false,"chapterTops":[],"coinCount":21,"collectIds":[],"email":"","icon":"","id":142880,"nickname":"shi002","password":"","publicName":"shi002","token":"","type":0,"username":"shi002"},"errorCode":0,"errorMsg":""}
+=====================================================
+INFO    2022-11-28 18:49:25,666E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/logout/json
+请求方法: GET
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'loginUserName_wanandroid_com=shi002; token_pass_wanandroid_com=719f7364683e247dc07e29a6604cde0f; JSESSIONID=ED7946F80B40050E56F5798B46D4D75A; loginUserName=shi002; token_pass=719f7364683e247dc07e29a6604cde0f'}
+响应状态码: 200
+请求内容: None
+响应体: {"data":null,"errorCode":0,"errorMsg":""}
+=====================================================
+INFO    2022-11-28 18:49:25,745E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/logout/json
+请求方法: GET
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'JSESSIONID=ED7946F80B40050E56F5798B46D4D75A'}
+响应状态码: 200
+请求内容: None
+响应体: {"data":null,"errorCode":0,"errorMsg":""}
+=====================================================

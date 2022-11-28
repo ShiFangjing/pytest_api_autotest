@@ -4,3 +4,9 @@
 - case_name: test_login_register_repeat
   body: [{"username": "shi002","password": "shi002","repassword": "shi002"},{"username": "shi002","password": "shi002","repassword": "shi002"},{"username": "shi002","password": "shi002","repassword": "shi002"}]
   expect: [{"errorCode": 0, "errorMsg": ""}, {"errorCode": -1, "errorMsg": "用户名已经被注册！"}, {"errorCode": -1, "errorMsg": "用户名已经被注册！"}]
+- case_name: test_login_error
+  body: [ { "username": "shi004","password": "shi004","repassword": "shi004" },{ "username": "shi004","password": "shi003" }]
+  expect: [{"errorCode": 0, "errorMsg": ""}, {"errorCode": -1, "errorMsg": "账号密码不匹配！"}]
+- case_name: test_login_logout_repeat
+  body: [ { "username": "shi002","password": "shi002","repassword": "shi002" },{ "username": "shi002","password": "shi002" },{ },{ } ]
+  expect: [ {"errorCode": -1, "errorMsg": "用户名已经被注册！"},{ "errorCode": 0,"errorMsg": "" },{ "errorCode": 0,"errorMsg": "" },{ "errorCode": 0,"errorMsg": "" }  ]

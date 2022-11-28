@@ -30,9 +30,29 @@ class TestUser:
         register_result = user.register(data=in_data)
         AssertTool.assert_json_contains(register_result.json(), expect_data)
 
+    @pytest.mark.usefixtures('delete_user')
+    def test_login_error(self):
+        # 注册
+        register_result = user.register(data=case_data[2]['body'][0])
+        AssertTool.assert_json_contains(register_result.json(), case_data[2]['expect'][0])
+        # 密码不对，登录错误
+        login_result = user.login(data=case_data[2]['body'][1])
+        AssertTool.assert_json_contains(login_result.json(), case_data[2]['expect'][1])
 
-    # def test_login_logout_repeat(self):
-    #     pass
+    @pytest.mark.usefixtures('delete_user')
+    def test_login_logout_repeat(self):
+        # 注册
+        register_result = user.register(data=case_data[3]['body'][0])
+        AssertTool.assert_json_contains(register_result.json(), case_data[3]['expect'][0])
+        # 登录
+        login_result = user.login(data=case_data[3]['body'][1])
+        AssertTool.assert_json_contains(login_result.json(), case_data[3]['expect'][1])
+        # 登出
+        logout_result = user.logout(data=case_data[3]['body'][2])
+        AssertTool.assert_json_contains(logout_result.json(), case_data[3]['expect'][2])
+        # 重复登出
+        logout_result = user.logout(data=case_data[3]['body'][3])
+        AssertTool.assert_json_contains(logout_result.json(), case_data[3]['expect'][3])
 
 
 if __name__ == '__main__':
