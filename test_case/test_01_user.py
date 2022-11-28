@@ -24,12 +24,18 @@ class TestUser:
         logout_result = user.logout(data=case_data[0]['body'][2])
         AssertTool.assert_json_contains(logout_result.json(), case_data[0]['expect'][2])
 
-    def test_login_register_repeat(self):
-        pass
+    @pytest.mark.usefixtures('delete_user')
+    @pytest.mark.parametrize('in_data,expect_data',
+                             [(a, b) for a, b in zip(case_data[1]['body'], case_data[1]['expect'])],
+                             ids=['第一次登录', '第二次登录', '第三次登录'])
+    def test_login_register_repeat(self, in_data, expect_data):
+        register_result = user.register(data=in_data)
+        AssertTool.assert_json_contains(register_result.json(), expect_data)
+
 
     # def test_login_logout_repeat(self):
     #     pass
 
 
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(['-vs', 'test_02_user.py'])

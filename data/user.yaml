@@ -2,3 +2,5 @@
   body: [ { "username": "shi002","password": "shi002","repassword": "shi002" },{ "username": "shi002","password": "shi002" },{ } ]
   expect: [ { "errorCode": 0,"errorMsg": "" },{ "errorCode": 0,"errorMsg": "" },{ "errorCode": 0,"errorMsg": "" } ]
 - case_name: test_login_register_repeat
+  body: [{"username": "shi002","password": "shi002","repassword": "shi002"},{"username": "shi002","password": "shi002","repassword": "shi002"},{"username": "shi002","password": "shi002","repassword": "shi002"}]
+  expect: [{"errorCode": 0, "errorMsg": ""}, {"errorCode": -1, "errorMsg": "用户名已经被注册！"}, {"errorCode": -1, "errorMsg": "用户名已经被注册！"}]
