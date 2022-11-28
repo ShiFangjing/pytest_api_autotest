@@ -2,6 +2,9 @@ import pymysql
 from config.read_config import ReadConfig
 
 
+"""MySQL的正删改查"""
+
+
 class MySQLTool(object):
 
     def __init__(self, database):
