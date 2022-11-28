@@ -5,13 +5,14 @@ from config.read_config import ReadConfig
 only_cookie = {}
 base_url = ReadConfig().read_base_url()
 
+
 @pytest.fixture(scope='function')
 def delete_user():
     # TODO: 删除用户操作，从数据库中删掉该用户
     pass
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function')
 def delete_user_collections():
     # TODO: 删除用户的所有收藏
     pass

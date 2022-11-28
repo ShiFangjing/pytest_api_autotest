@@ -17,3 +17,5 @@ todo5：main.py完善，生成报告，重跑上次失败的用例
 todo6：pytest与jenkis结合
 
 todo7：fixture.cache的使用
+
+todo8：完成Readme.md

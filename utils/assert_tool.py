@@ -3,6 +3,7 @@ class AssertTool(object):
     判断actual_json在不在target_json中
     TODO:待完成嵌套式json断言功能
     """
+
     @staticmethod
     def assert_json_contains(actual_json, target_json):
         keys = target_json.keys()
@@ -14,6 +15,19 @@ class AssertTool(object):
 
 # 测试方法
 if __name__ == '__main__':
-    json1 = {"data": "", "errorCode": 0, "errorMsg": ""}
-    json2 = {"errorCode": 0, "errorMsg": ""}
-    print(AssertTool.assert_json_contains(json1,json2))
+    json1 = {
+        "data": {
+            "desc": "",
+            "icon": "",
+            "id": 50944,
+            "link": "www.github.com",
+            "name": "github",
+            "order": 0,
+            "userId": 140567,
+            "visible": 1
+        },
+        "errorCode": 0,
+        "errorMsg": ""
+    }
+    json2 = {"data": {"link": "www.github.com", "name": "github"}, "errorCode": 0, "errorMsg": ""}
+    print(AssertTool.assert_json_contains(json1, json2))

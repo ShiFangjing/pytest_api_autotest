@@ -1,18 +1,18 @@
 - case_name: test_collect_normal
-  body:
-  expect:
+  body: [{'name':'github','link': 'www.github.com'}]
+  expect: [{"data": {"link": "www.github.com","name": "github"},"errorCode": 0,"errorMsg": ""}]
 - case_name: test_update_collect
-  body: 11
-  expect:
+  body: [{'name':'github2','link': 'www.github.com2'}]
+  expect: [{"data": {"link": "www.github.com2","name": "github2"},"errorCode": 0,"errorMsg": ""}]
 - case_name: test_delete_collect
-  body:
-  expect:
+  body: [{'name':'github','link': 'www.github.com'}]
+  expect: [{"data": null,"errorCode": 0,"errorMsg": ""}]
 - case_name: test_collect_unregister
-  body:
+  body: [{'name':'github','link': 'www.github.com'}]
   expect:
 - case_name: test_collect_unlogin
-  body:
+  body: [{'name':'github','link': 'www.github.com'}]
   expect:
 - case_name: test_collect_logout
-  body:
+  body: [{'name':'github','link': 'www.github.com'}]
   expect:

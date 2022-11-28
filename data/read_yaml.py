@@ -15,4 +15,4 @@ class ReadYaml(object):
 
 # 读取yaml的测试方法
 if __name__ == '__main__':
-    print(ReadYaml.read_yaml('user.yaml'))
+    print(ReadYaml.read_yaml('collect.yaml'))
