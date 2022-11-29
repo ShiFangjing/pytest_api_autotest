@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from api.collect import Collect
@@ -12,8 +13,11 @@ col = Collect(base_url)
 user = User(base_url)
 
 
-class TestCollect():
+@allure.epic("项目名称: 用户收藏系统")
+@allure.feature("模块名称: 收藏模块")
+class TestCollect:
 
+    @allure.story("添加收藏-查询收藏")
     @pytest.mark.usefixtures('delete_user_collections')
     def test_collect_normal(self, get_cookie, delete_user_collections):
         cookie = get_cookie
@@ -23,6 +27,7 @@ class TestCollect():
         # 查询收藏
         # 查询结果断言
 
+    @allure.story("添加收藏-修改收藏")
     @pytest.mark.usefixtures('delete_user_collections')
     def test_update_collect(self, get_cookie, delete_user_collections):
         cookie = get_cookie
@@ -34,20 +39,24 @@ class TestCollect():
         AssertTool.assert_json_contains(update_res.json(), case_data[1]['expect'][1])
         # 查询修改后的收藏
 
+    @allure.story("添加收藏-删除收藏")
     def test_delete_collect(self, get_cookie, delete_user_collections):
         # 添加收藏
         # 删除收藏
         # 查询收藏
         assert 1 == 1
 
+    @allure.story("未注册-添加收藏-失败")
     def test_collect_unregister(self):
         res = col.add_collect(data=case_data[0]['body'][0], cookies=None)
         AssertTool.assert_json_contains(res.json(), case_data[0]['expect'][0])
 
+    @allure.story("未登录-添加收藏-失败")
     def test_collect_unlogin(self):
         res = col.add_collect(data=case_data[0]['body'][0], cookies=None)
         AssertTool.assert_json_contains(res.json(), case_data[0]['expect'][0])
 
+    @allure.story("登出-添加收藏-失败")
     def test_collect_logout(self, get_cookie):
         cookie = get_cookie
         user.logout(cookies = cookie)

@@ -1,3 +1,4 @@
+import allure
 import pytest
 from api.user import User
 from config.read_config import ReadConfig
@@ -9,7 +10,10 @@ case_data = ReadYaml.read_yaml('user.yaml')
 user = User(base_url)
 
 
+@allure.epic("项目名称: 用户收藏系统")
+@allure.feature("模块名称: 登录模块")
 class TestUser:
+    @allure.story("注册登录登出正常流程")
     @pytest.mark.usefixtures('delete_user')
     def test_login_normal(self):
         # 注册
@@ -22,6 +26,7 @@ class TestUser:
         logout_result = user.logout(data=case_data[0]['body'][2])
         AssertTool.assert_json_contains(logout_result.json(), case_data[0]['expect'][2])
 
+    @allure.story("相同用户名不能重复注册")
     @pytest.mark.usefixtures('delete_user')
     @pytest.mark.parametrize('in_data,expect_data',
                              [(a, b) for a, b in zip(case_data[1]['body'], case_data[1]['expect'])],
@@ -30,6 +35,7 @@ class TestUser:
         register_result = user.register(data=in_data)
         AssertTool.assert_json_contains(register_result.json(), expect_data)
 
+    @allure.story("密码错误登录失败")
     @pytest.mark.usefixtures('delete_user')
     def test_login_error(self):
         # 注册
@@ -39,6 +45,7 @@ class TestUser:
         login_result = user.login(data=case_data[2]['body'][1])
         AssertTool.assert_json_contains(login_result.json(), case_data[2]['expect'][1])
 
+    @allure.story("重复登出-正常")
     @pytest.mark.usefixtures('delete_user')
     def test_login_logout_repeat(self):
         # 注册
