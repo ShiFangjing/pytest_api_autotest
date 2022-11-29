@@ -31,9 +31,9 @@ todo8：完成Readme.md
 
 |——config
 
-|    |————envi.ini            环境配置数据
+|————envi.ini            环境配置数据
 
-|    |————read_config.py      读取环境配置数据
+|————read_config.py      读取环境配置数据
 
 |——data                       测试数据，yaml方式存储，并提供了yaml数据的读取方法
 
