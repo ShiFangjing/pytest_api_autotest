@@ -2,6 +2,7 @@ import pytest
 
 from api.user import User
 from config.read_config import ReadConfig
+
 only_cookie = {}
 base_url = ReadConfig().read_base_url()
 
@@ -27,11 +28,11 @@ def get_cookie():
     res = user.login(data=params)
     only_cookie = res.cookies
     return only_cookie
-
-
-@pytest.fixture(scope='session', autouse=True)
-def logout():
-    yield
     print("用户登出")
     user = User(base_url)
     user.logout(cookies=only_cookie)
+
+
+@pytest.fixture(scope='function', autouse=True)
+def register_and_delete_user():
+    pass
