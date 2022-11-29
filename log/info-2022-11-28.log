@@ -79,3 +79,21 @@ INFO    2022-11-28 18:49:25,745E:\2_PythonProject\pytest_api_autotest\log\info-2
 请求内容: None
 响应体: {"data":null,"errorCode":0,"errorMsg":""}
 =====================================================
+INFO    2022-11-28 19:01:29,944E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/login
+请求方法: POST
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '37', 'Content-Type': 'application/x-www-form-urlencoded'}
+响应状态码: 200
+请求内容: username=sfj123456&password=sfj123456
+响应体: {"data":{"admin":false,"chapterTops":[],"coinCount":60,"collectIds":[-1,1165],"email":"","icon":"","id":140567,"nickname":"sfj123456","password":"","publicName":"sfj123456","token":"","type":0,"username":"sfj123456"},"errorCode":0,"errorMsg":""}
+=====================================================
+INFO    2022-11-28 19:01:30,229E:\2_PythonProject\pytest_api_autotest\log\info-2022-11-28.log:log_tool.py:35 
+======================================================
+请求路径: https://www.wanandroid.com/user/logout/json
+请求方法: GET
+请求头: {'User-Agent': 'python-requests/2.20.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+响应状态码: 200
+请求内容: None
+响应体: {"data":null,"errorCode":0,"errorMsg":""}
+=====================================================
