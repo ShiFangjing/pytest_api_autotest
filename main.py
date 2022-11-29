@@ -6,8 +6,8 @@ from utils.log_control import INFO
 
 
 def run():
-        INFO.logger.info(
-            """
+    INFO.logger.info(
+        """
                              _    _         _      _____         _
               __ _ _ __ (_)  / \\  _   _| |_ __|_   _|__  ___| |_
              / _` | '_ \\| | / _ \\| | | | __/ _ \\| |/ _ \\/ __| __|
@@ -16,15 +16,15 @@ def run():
                   |_|
                   开始执行{}项目...
                 """
-        )
+    )
 
-        # 判断现有的测试用例，如果未生成测试代码，则自动生成
-        # TestCaseAutomaticGeneration().get_case_automatic()
+    # 判断现有的测试用例，如果未生成测试代码，则自动生成
+    # TestCaseAutomaticGeneration().get_case_automatic()
 
-        pytest.main(['-s', '-W', 'ignore:Module already imported:pytest.PytestWarning',
-                     '--alluredir', 'report', "--clean-alluredir"])
+    pytest.main(['-s', '-W', 'ignore:Module already imported:pytest.PytestWarning',
+                 '--alluredir', 'report', "--clean-alluredir"])
 
-        """
+    """
                    --reruns: 失败重跑次数
                    --count: 重复执行次数
                    -v: 显示错误位置以及错误的详细信息
@@ -36,7 +36,7 @@ def run():
                     "--reruns=3", "--reruns-delay=2"
                    """
 
-        os.system(r"allure generate report -o report/html --clean")
+    os.system(r"allure generate report -o report/html --clean")
 
 
 if __name__ == '__main__':

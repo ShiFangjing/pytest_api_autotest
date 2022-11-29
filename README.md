@@ -1,8 +1,45 @@
 # pytest_api_autotest
 An example about interface autotest based on pytest framework
 
+## 框架介绍：
 
-2022/11/24
+:call_me_hand: 基本框架：Python + pytest + allure + log + yaml + mysql + redis 
+
+:call_me_hand:支持范围：
+
+​    ⭐ 支持测试用例与测试数据分离
+
+​    ⭐ 支持测试前置和后置步骤
+
+​    ⭐ 支持复杂json断言
+
+​    ⭐ 支持MySQL和Redis的增删改查
+
+​    ⭐支持生成用例日志
+
+​    ⭐支持生成Allure测试报告
+
+## 目录结构：
+
+|——api                          接口封装成方法
+
+|——config                     配置文件夹
+
+|————envi.ini                       环境配置数据
+
+|————read_config.py         读取环境配置数据
+
+|——data                      测试数据，yaml方式存储，并提供了yaml数据的读取方法
+
+|——log                        日志存储路径
+
+|——test_case             测试用例
+
+|——utils                      各种工具类
+
+
+
+## 待完善
 
 todo1：加解密封装   done
 
@@ -20,26 +57,3 @@ todo7：fixture.cache的使用
 
 todo8：完成Readme.md
 
-
-框架介绍：
-
- Python + pytest + allure + log + yaml + mysql + redis 
- 
-目录结构：
-
-|——api                        接口封装成方法
-
-|——config
-
-|————envi.ini            环境配置数据
-
-|————read_config.py      读取环境配置数据
-
-|——data                       测试数据，yaml方式存储，并提供了yaml数据的读取方法
-
-|——log                        日志存储路径
-
-|——test_case                  测试用例
-
-|——utils                      各种工具类
- 
