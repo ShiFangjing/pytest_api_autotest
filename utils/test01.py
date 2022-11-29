@@ -1,3 +1,5 @@
+import os
+
 list1 = [{"username": "shi002", "password": "shi002", "repassword": "shi002"},
          {"username": "shi002", "password": "shi002", "repassword": "shi002"},
          {"username": "shi002", "password": "shi002", "repassword": "shi002"}]
@@ -8,14 +10,8 @@ result = []
 res = [(a, b) for a, b in zip(list1, list2)]
 
 
+from utils.redis_tool import ReadConfig
 
 
-import requests
-
-r = requests.get('https://www.baidu.com', verify=False)
-print(r.url)
-print(r.request.method)
-print(r.request.headers)
-print(r.status_code)
-print(r.request.body)
-print(r.text)
+print(ReadConfig.read_base_url())
+print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
