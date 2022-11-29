@@ -27,7 +27,7 @@ def get_cookie():
               'password': 'sfj123456'}
     res = user.login(data=params)
     only_cookie = res.cookies
-    return only_cookie
+    yield only_cookie
     print("用户登出")
     user = User(base_url)
     user.logout(cookies=only_cookie)
