@@ -19,3 +19,18 @@ todo6：pytest与jenkis结合
 todo7：fixture.cache的使用
 
 todo8：完成Readme.md
+
+
+框架介绍：
+ Python + pytest + allure + log + yaml + mysql + redis 
+ 
+目录结构：
+|——api                        接口封装成方法
+|——config
+|    |————envi.ini            环境配置数据
+|    |————read_config.py      读取环境配置数据
+|——data                       测试数据，yaml方式存储，并提供了yaml数据的读取方法
+|——log                        日志存储路径
+|——test_case                  测试用例
+|——utils                      各种工具类
+ 
