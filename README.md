@@ -1,5 +1,5 @@
 # pytest_api_autotest
-![alt](https://img.shields.io/badge/Rebecca-1996-brightgreen)
+![alt](https://img.shields.io/badge/Rebecca-1996-brightgreen) ![](https://img.shields.io/badge/updated-today-brightgreen)
 
 ## 框架介绍
 
