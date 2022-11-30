@@ -1,6 +1,10 @@
 # pytest_api_autotest
 ![alt](https://img.shields.io/badge/Rebecca-1996-brightgreen) ![](https://img.shields.io/badge/updated-today-brightgreen)
 
+
+## 安装步骤
+pip install -r requirements.txt
+
 ## 框架介绍
 
 :call_me_hand: 基本框架：Python + pytest + allure + log + yaml + mysql + redis 
