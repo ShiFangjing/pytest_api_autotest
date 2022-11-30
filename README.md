@@ -1,7 +1,7 @@
 # pytest_api_autotest
-An example about interface autotest based on pytest framework
+![]([Rebecca: 1996 (shields.io)](https://img.shields.io/badge/Rebecca-1996-brightgreen)
 
-## 框架介绍：
+## 框架介绍
 
 :call_me_hand: 基本框架：Python + pytest + allure + log + yaml + mysql + redis 
 
@@ -19,7 +19,7 @@ An example about interface autotest based on pytest framework
 
 ​    ⭐支持生成Allure测试报告
 
-## 目录结构：
+## 目录结构
 
 |——api                          接口封装成方法
 
@@ -36,6 +36,12 @@ An example about interface autotest based on pytest framework
 |——test_case             测试用例
 
 |——utils                      各种工具类
+
+|——report                  测试报告存放路径
+
+## 更新日志
+
+2022/11/30：完善README，增加安装步骤，requirements.txt，完善注释规范
 
 
 
