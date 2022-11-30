@@ -6,26 +6,24 @@ class User(RequestTool):
     def __init__(self, api_root_url):
         super(User, self).__init__(api_root_url)
 
-    """注册用户"""
-
     def register(self, **kwargs):
+        """注册用户"""
         return self.post("/user/register", **kwargs)
 
-    """登录用户"""
-
     def login(self, **kwargs):
+        """登录用户"""
         return self.post("/user/login", **kwargs)
 
-    """"登出用户"""
-
     def logout(self, **kwargs):
+        """"登出用户"""
         return self.get("/user/logout/json", **kwargs)
 
 
+# 测试代码
 if __name__ == '__main__':
     user = User('https://www.wanandroid.com')
-    params = {'username': 'sfj123456',
-              'password': 'sfj123456'}
+    params = {'username': 'sfjXXXXXX',
+              'password': 'sfjXXXXXX'}
 
     response = user.login(data=params)
     cookie = response.cookies

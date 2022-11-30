@@ -1,0 +1,6 @@
+生成Allure测试报告步骤：
+
+1. 在Terminal下cd到本项目目录下，如： E:\2_PythonProject\pytest_api_autotest>
+2. 跑全部用例，顺带清除上一次的测试用例批跑数据，pytest --alluredir=report --clean-alluredir
+3. 生成测试报告：allure generate --clean report
+4. 查看测试报告：allure serve report

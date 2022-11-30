@@ -6,6 +6,7 @@ import yaml
 class ReadYaml(object):
     @staticmethod
     def read_yaml(filename=None):
+        """"根据文件名字读取data目录下的yaml文件"""
         filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)),  filename)
         print(filepath)
         with open(filepath, 'r', encoding='utf-8') as f:
