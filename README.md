@@ -3,7 +3,7 @@
 
 
 ## 安装步骤
-`pip install -r requirements.txt`
+pip install -r requirements.txt
 
 ## 框架介绍
 
