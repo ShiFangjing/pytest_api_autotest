@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 :cyclone: 测试方案
 
-![](C:\Users\ShiFangjing\Pictures\屏幕截图 2022-12-06 201751.png)
+![](https://github.com/ShiFangjing/pytest_api_autotest/blob/main/data/test_design.png)
 
 ## 目录结构
 
