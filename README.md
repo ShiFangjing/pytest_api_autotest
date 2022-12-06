@@ -7,10 +7,9 @@ pip install -r requirements.txt
 
 ## 框架介绍
 
-
 基于Python + pytest + allure + logging + yaml + mysql + redis 等库实现简单的接口自动化测试框架
 
-:call_me_hand:支持范围：
+:cyclone: 支持范围：
 
 ​    ⭐ 支持测试用例与测试数据分离
 
@@ -23,6 +22,10 @@ pip install -r requirements.txt
 ​    ⭐支持生成用例日志
 
 ​    ⭐支持生成Allure测试报告
+
+:cyclone: 测试方案
+
+![](C:\Users\ShiFangjing\Pictures\屏幕截图 2022-12-06 201751.png)
 
 ## 目录结构
 
@@ -64,7 +67,7 @@ todo5：main.py完善，生成报告，重跑上次失败的用例        done
 
 todo6：pytest与jenkins结合
 
-todo7：fixture.cache的使用      done
+todo7：fixture.cache的使用       done
 
 todo8：完成Readme.md            done
 
