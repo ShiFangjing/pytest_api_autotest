@@ -7,7 +7,8 @@
 
 ## 框架介绍
 
-:call_me_hand: 基本框架：Python + pytest + allure + log + yaml + mysql + redis 
+
+基于Python + pytest + allure + logging + yaml + mysql + redis 等库实现简单的接口自动化测试框架
 
 :call_me_hand:支持范围：
 
@@ -59,11 +60,11 @@ todo3：sha256加解密   done
 
 todo4：日志装饰器       done http；undo redis mysql
 
-todo5：main.py完善，生成报告，重跑上次失败的用例
+todo5：main.py完善，生成报告，重跑上次失败的用例        done
 
-todo6：pytest与jenkis结合
+todo6：pytest与jenkins结合
 
-todo7：fixture.cache的使用
+todo7：fixture.cache的使用      done
 
-todo8：完成Readme.md
+todo8：完成Readme.md            done
 
